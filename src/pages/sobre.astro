@@ -1,60 +1,36 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | 1406 Tech</title>
-	</head>
-	<body>
-		<header>
-			<strong>1406 Tech</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../Layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Sobre a 1406 Tech</h1>
-				<p>Fundada na pequena garagem do número 1406, a empresa 1406 nasceu da ideia de transformar projetos esquecidos em tecnologia acessível para todos. Com o empenho de três jovens visionários, a startup desenvolveu um programa inovador para ajudar pequenas comunidades a organizar e expandir seus negócios locais. Em pouco tempo, o número na porta deixou de ser apenas um endereço e se tornou um verdadeiro símbolo de criatividade e impacto social.</p>
-			</section>
+<LayoutBase 
+	titulo="Sobre Nós" 
+	descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+	<section>
+		<h1>Sobre a {empresa.nome}</h1>
+		<p>{empresa.historia}</p>
+	</section>
 
-			<section>
-				<h2>Missão</h2>
-				<p>Transformar desafios complexos em soluções de software simples, enxutas e eficientes,conectando negócios ao futuro com agilidade, segurança e sem burocracia.</p>
-			</section>
+	<section>
+		<h2>Missão</h2>
+		<p>{empresa.missao}</p>
+	</section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>Ser a referência nacional em desenvolvimento de software de alta performance, reconhecida pela criação de soluções digitais enxutas, ágeis e transformadoras.</p>
-			</section>
+	<section>
+		<h2>Visão</h2>
+		<p>{empresa.visao}</p>
+	</section>
 
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Simplicidade e Eficiência</h3>
-						<p>Eliminar o excesso e focar no que funciona, desenvolvendo códigos limpos, diretos e sem burocracia para entregar soluções funcionais de verdade.</p>
-					</li>
-					<li>
-						<h3>Excelência Técnica com Agilidade</h3>
-						<p>Manter os mais altos padrões de segurança e arquitetura de software, garantindo entregas rápidas e sem comprometer a estabilidade do sistema.</p>
-					</li>
-					<li>
-						<h3>Autenticidade e Transparência</h3>
-						<p>Falar a língua do cliente com clareza e honestidade, construindo relações de confiança sem floreios técnicos ou promessas inalcançáveis.</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 1406 Tech. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Nossos Valores</h2>
+		<ul>
+			{empresa.valores.map((valor) => (
+				<li>
+					<h3>{valor.titulo}</h3>
+					<p>{valor.descricao}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</LayoutBase>
