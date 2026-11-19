@@ -22,7 +22,7 @@ export const empresa = {
     }
   ],
   publicoAlvo:
-    "Pequenas e Médias Empresas, Startups, Empreendedores e Profissionais Liberais",
+    "Pequenas e médias empresas, startups, empreendedores e profissionais liberais que buscam soluções tecnológicas para otimizar seus processos e aprimorar seus serviços. Atendemos também empresas de grande porte, instituições comerciais e organizações que desejam modernizar suas operações por meio de softwares personalizados. Nosso público inclui negócios de diferentes segmentos que procuram inovação, automação, eficiência e ferramentas digitais para impulsionar seu crescimento e alcançar melhores resultados.",
   contato: {
     email: "contato@1406tech.com.br",
     telefone: "(61) 99860-7070",
@@ -38,21 +38,21 @@ export const empresa = {
     {
       nome: "Gabriel Gadelha",
       cargo: "CEO e desenvolvedor Front End",
-      foto: "/images/gadelha.jpg",
+      foto: "/images/gadelha.png",
       alt: "Foto de Gabriel Gadelha",
       descricao: "Fundador da 1406 Tech, começou desenvolvendo sistemas de advocacia online no interior do Sul."
     },
     {
       nome: "Brenno Victor",
       cargo: "CTO e desenvolvedo Back End",
-      foto: "/images/brenno.jpg",
+      foto: "/images/brenno.png",
       alt: "Foto de Brenno Victor",
       descricao: "Especialista em desenvolvimento Back End, chegou para ampliar a capacidade de entrega da empresa."
     },
     {
       nome: "Alecsander Alves",
       cargo: "Diretor de criação",
-      foto: "/images/Alves.jpg",
+      foto: "/images/alecsander.png",
       alt: "Foto de Alecsander Alves",
       descricao: "Chegou com o propósito de fortalecer a presença digital da empresa e impulsionar seu crescimento."
     }
